@@ -10,14 +10,13 @@ body {
 
 /* header */
 .header {
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: white;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    /* glass effect */
+    color: white;
+    padding: 10px 20px;
+
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(4.1px);
     -webkit-backdrop-filter: blur(4.1px);
@@ -26,6 +25,58 @@ body {
     position: relative;
     z-index: 3;
 }
+
+
+.header-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-btn {
+    font-size: 14px;
+    padding: 12px 14px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.toggle-btn.active {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+
+.glass-flightattendant-btn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    font-family: inherit;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+    border-radius: 12px;
+    transition: background 0.3s ease;
+}
+
+.glass-flightattendant-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
 
 /* dropdown knop  */
 .dropdown {
@@ -57,25 +108,38 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+
+    /* translucent glass style */
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 4;
+
+    transition: background 180ms ease, box-shadow 180ms ease, transform 120ms ease;
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background 120ms ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: rgba(255,255,255,0.08);
 }
 
+/* increase opacity and shadow when the dropdown is opened/hovered */
 .dropdown:hover .dropdown-content {
     display: block;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 16px 32px rgba(0,0,0,0.32);
 }
 
 /* content */
@@ -85,7 +149,7 @@ body {
     z-index: 1;
 }
 
-/* achtergrind titel */
+/* achtergrond titel */
 .background-title {
     position: absolute;
     top: 50%;
@@ -98,16 +162,51 @@ body {
 }
 
 /* ruimteschip plaatje */
+
 .ship {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 300px;
     z-index: 2;
+
+    /* Start off-screen */
+    transform: translate(-50%, 150%);
+    
+    animation:
+        flyIn 1.8s ease-out forwards,
+        float 4s ease-in-out infinite;
+    animation-delay:
+        0s,
+        1.8s;
 }
 
-/* FOOTER */
+@keyframes flyIn {
+    from {
+        transform: translate(-50%, 150%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-18px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+
+
+/* footer */
 .footer {
     position: fixed;
     left: 0;
