@@ -1,3 +1,9 @@
+
+document.getElementById("logo").addEventListener("click", () => {
+  window.location.href = "home_page.html";
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const playerTitle = document.getElementById("player-title");
   const playerArtist = document.getElementById("player-artist");
