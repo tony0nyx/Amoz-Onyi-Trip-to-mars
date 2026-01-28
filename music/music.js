@@ -1,6 +1,6 @@
 
 document.getElementById("logo").addEventListener("click", () => {
-  window.location.href = "home_page.html";
+  window.location.href = "../home/home_page.html";
 });
 
 
