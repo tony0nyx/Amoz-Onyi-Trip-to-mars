@@ -16,9 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     playerArtist.textContent = current.artist;
     playerToggle.textContent = current.playing ? "⏸" : "⏵";
     playBtn.textContent = current.playing ? "Pause" : "Play";
-  }
-
-  // track play buttons
+    }
+    
   document.querySelectorAll(".track").forEach(trackEl => {
     trackEl.querySelector(".track-play").addEventListener("click", () => {
       current.title = trackEl.dataset.title;
