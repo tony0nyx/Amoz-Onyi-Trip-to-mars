@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+
+
+    <link rel="stylesheet" href="libary.css">
+    <script src="app.js" defer></script>
+    <script src="sidemenu.js" defer></script>
+    <script src="dropdwon.js" defer></script>
+
+    <title> libary</title>
+</head>
+<body>
+            <!--Navbar (0 - 0)-->
+    <div class="conainter_navdiv">
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo">
+                    <img src="Imgs/Library.svg">
+                </div>
+
+                <ul>
+                    <li class="center-navbar">
+                        <div class="search-container">
+                            <form>
+                                <input class="Search-bar" type="text" placeholder="Search..." name="Search">
+                            </form>
+                        </div>
+                    </li>
+
+                    
+                </ul>
+                <ul>
+                    <li class="left-navbar">
+                       <div class="dropdown">
+                            <button onclick="dropDown()" class="dropbtn">MENU</button>
+
+                            <div id="stuff" class="dropdown-content">
+                                <a href="/home_page.html">Home</a>
+                            </div>
+                        </div> 
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+<!-- Swiper, why did i try this, idk-->
+<div class="container-swiper">
+  <div class="swiper">
+  <!-- wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+        <img src="books/Anna frank.png" alt="">
+        <div class="title">
+            <span>Anna Frank</span>
+        </div>
+    </div>
+
+    <div class="swiper-slide">
+        <img src="books/Hotel Magnifique.png" alt="">
+        <div class="title">
+            <span>Hotel Magnifique</span>
+        </div>
+    </div>
+
+    <div class="swiper-slide">
+        <img src="books/I have no mouth & I must scream.png" alt="">
+        <div class="title">
+            <span>I have no mouth & I must scream</span>
+        </div>
+    </div>
+
+    <div class="swiper-slide">
+        <img src="books/I'm thinking of ending things.png" alt="">
+        <div class="title">
+            <span>I'm thinking of ending things</span>
+        </div>
+    </div>
+    
+    <div class="swiper-slide">
+        <img src="books/Listen ----.png" alt="">
+        <div class="title">
+            <span>Listen...</span>
+        </div>
+    </div>
+
+    <div class="swiper-slide">
+        <img src="books/The love hypothesis.png" alt="">
+        <div class="title">
+            <span>The love hypothesis</span>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <img src="books/The song of achilles.png" alt="">
+        <div class="title">
+            <span>The song of achilles</span>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <img src="books/The spirits bears it's teeth.png" alt="">
+        <div class="title">
+            <span>The spirits bears it's teeth</span>
+        </div>
+    </div>
+
+  </div>
+  <div class="swiper-pagination"></div>
+
+   </div>
+
+</div>
+
+<!-- side menu-->
+<div class="menu_combo">
+    <aside id="sidebar">
+        <ul>
+            <li>
+                <span class="logo"> GENRES</span>
+                <button onclick=toggleSidebar()  id="toggle-btn">
+                <img src="icons/menu_open_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="img_logo" height="24px">
+                </button>
+            </li>
+            <li> 
+                <a href="#fantasy">
+                    <img src="icons/wand_stars_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" height="24px">
+                     <span> Fantasy </span> 
+                 </a>
+            </li>
+
+            <li> 
+                <a href="#romance"> 
+                    <img src="icons/heart_plus_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" height="24px">
+                    <span> Romance</span> 
+                </a>
+            </li>
+
+            <li> 
+                <a href="#mystery">
+                    <img src="icons/mystery_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"  height="24px">
+                     <span> Mystery</span> 
+                </a>
+            </li>
+
+            <li> 
+                <a href="#horror">
+                    <img src="icons/sentiment_stressed_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"  height="24px">
+                     <span> Horror</span>
+                </a>
+            </li>
+
+            <li> 
+                <a href="#non-fiction">
+                    <img src="icons/cognition_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg">
+                 <span> Non-fiction</span>
+                </a>
+            </li>
+
+        </ul>
+    </aside>
+
+    <main>
+        <div class="container" id="fantasy">
+            <h2> Fantasy </h2>
+            <div class="books">
+                <img src="books/F1.png">
+                <img src="books/F2.png">
+                <img src="books/F3.png">
+                <img src="books/F4.png">
+                <img src="books/F5.png">
+
+            </div>
+        </div>
+
+        <div class="container" id="romance">
+            <h2> Romance </h2>
+            <div class="books">
+                <img src="books/R1.png">
+                <img src="books/R2.png">
+                <img src="books/R3.png">
+                <img src="books/R4.png">
+                <img src="books/R5.png">
+            </div>
+        </div>
+
+        <div class="container" id="mystery">
+            <h2> Mystery </h2>
+            <div class="books">
+                <img src="books/M1.png">
+                <img src="books/M2.png">
+                <img src="books/M3.png">
+                <img src="books/M4.png">
+                <img src="books/M5.png">
+            </div>
+        </div>
+
+
+        <div class="container" id="horror">
+            <h2> Horror </h2>
+            <div class="books">
+                <img src="books/H1.png">
+                <img src="books/H2.png">
+                <img src="books/H3.png">
+                <img src="books/H4.png">
+                <img src="books/H5.png">
+            </div>
+        </div>
+
+        <div class="container" id="non-fiction">
+            <h2> Nonfiction </h2>
+            <div class="books">
+                <img src="books/NF1.png">
+                <img src="books/NF2.png">
+                <img src="books/NF3.png">
+                <img src="books/NF4.png">
+                <img src="books/NF5.png">
+
+            </div>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>

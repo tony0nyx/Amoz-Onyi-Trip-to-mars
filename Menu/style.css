@@ -1,0 +1,247 @@
+/* ------------Stuff about fonts-----------*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/*  Secondry text font   */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@200&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/*  Header font   */
+@font-face{
+    font-family: "Scorno";
+    src: url(Scorno.otf)
+}
+
+/*.rajdhani-light {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rajdhani-regular {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rajdhani-medium {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rajdhani-semibold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.rajdhani-bold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+/* -----------------------*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  line-height: 1.5rem;
+}
+
+body{
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+body{
+  background-image: url('Imgs/pi.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+/* -----------------------*/
+.container_navdiv{
+    height: 7%;
+    z-index: 3;
+}
+
+.logo{
+  margin-top: 5px;
+}
+
+.navdiv{
+    display: grid;
+    align-items: center;
+    height: 65px;
+    justify-content: space-between;
+    grid-template-columns: 6fr 15fr 2fr;
+}
+
+.navdiv{
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ padding-left: 35px;
+ padding-right: 35px;
+ border-bottom: 1px solid #7d86d2;
+}
+
+/* list */
+li,.dropdown ,.dropdown-content{
+ list-style: none;
+ text-decoration: none;
+ display: inline-block;
+ font-family: "Rajdhani", sans-serif;
+ font-weight: 400;
+}
+
+/* -----------------------*/
+.search-container{border: solid 1px red;}
+.Search-bar{
+    position: relative;
+    border: solid 1px red;
+    width: 400px;
+    height: 32px;
+    display: none;
+    }
+
+/* -----------------------*/
+
+/* DROPDOWN 
+  background-color: #42434a;
+  color: #e6e6ef;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Rajdhani", sans-serif;
+
+
+*/
+.dropbtn {
+  border: solid 1px red;
+  height: 45px;
+  text-align: left;
+  padding: 15px;
+  width: 95px;
+  transform: skew(320deg);
+  align-items: center;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color:  #5f2e7a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e6e6ef;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropbtn {
+  border: red;
+}
+
+.drop-icon{
+  position: fixed;
+  border: red;
+  z-index: 1;
+  right: 47px;
+  color: green;
+}
+.dropdown a:hover {background-color: #ddd;}
+
+
+.show {display: block;}
+/*------------------------------------*/
+/* FOOD menu */
+.menu-options{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  justify-content: center;
+  gap: 20px;
+  margin-left: 20px;
+  color: white;
+  margin-right: 20px;
+  align-items: center;
+}
+.Food-product{display: flex;flex-direction: column;text-align: center;}
+
+.Food-product p{
+  font-weight: 600;
+}
+
+.Food-product img{
+  height: auto;
+  border-radius: 10px;
+}
+
+.Food-product span{
+  text-align: left;
+  /* flex-direction: column; */
+}
+/*------------------------------------*/
+/* Background dacor */
+.background-dacor{
+position: relative;
+width: 80%;
+height: 100vh;
+
+}
+
+.dacor-rec{
+position: absolute;
+display: flex;
+fill: whitesmoke;
+}
+
+
+/*------------------------------------*/
+/* layers of the page */
+/* navbar */ 
+.layer3{
+z-index: 3;
+}
+
+/* menu */ 
+.layer2{
+  z-index: 2;
+}
+
+
+/* decors 
+.layer1{
+  z-index: 0;
+}
+/*------------------------------------*/
+/*------------------------------------*/
+.blur_effect{
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.208);
+  background: rgb(65 28 6 / 32%);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(3px);
+  position: fixed;
+  z-index: -1;
+  top: 2px;
+}
+/*------------------------------------*/
